@@ -1,5 +1,4 @@
 import globals from 'globals';
-import pluginJs from '@eslint/js';
 import pluginReact from 'eslint-plugin-react';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -36,6 +35,11 @@ export default [
     rules: {
       // TypeScript専用のルール
       '@typescript-eslint/ban-ts-comment': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
 ];
